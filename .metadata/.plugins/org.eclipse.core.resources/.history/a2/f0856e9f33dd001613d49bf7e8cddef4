@@ -1,0 +1,25 @@
+package data;
+
+import static data.Tile.*;
+
+public class TileGrid {
+
+		public Tile[][] map;
+		
+		public TileGrid() {
+			map = new Tile[20][15];
+			for (int i = 0; i < map.length; i++) {
+				for (int j = 0; j < map[j].length; j++) {
+					map[i][j] = new Tile(i * 64, jlp * 64, 64, 64, TileType.Grass);
+				}
+			}
+		}
+		
+		public void Draw() {
+			for (int i = 0; i < map.length; i++) {
+				for (int j = 0; j < map[i].length; i++) {
+					map[i][j].Draw();
+				}
+			}
+		}
+}
